@@ -35,7 +35,7 @@ final class healthcare {
      */
     private function __construct()
     {
-        
+        $this->define_constants();
     }
 
     /**
@@ -56,8 +56,8 @@ final class healthcare {
         define( 'SHC_VERSION', self::version );
         define( 'SHC_FILE', __FILE__ );
         define( 'SHC_PATH', __DIR__ );
-        define( 'SHC_URL', plugins_url('',SHC_FILE ) );
-        define( 'SHC_ASSETS', SHC_URL./assets );
+        define( 'SHC_URL', plugins_url( '',SHC_FILE ) );
+        define( 'SHC_ASSETS', SHC_URL . '/assets' );
     }
 }
 

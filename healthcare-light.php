@@ -36,6 +36,11 @@ final class healthcare {
     private function __construct()
     {
         $this->define_constants();
+
+        /**
+         * Register activation hook to check plugin version
+         */
+        register_activation_hook( __FILE__, [$this, 'activation']);
     }
 
     /**

@@ -40,7 +40,7 @@ final class healthcare {
         /**
          * Register activation hook to check plugin version
          */
-        register_activation_hook( __FILE__, [$this, 'activation']);
+        register_activation_hook( __FILE__, [$this, 'activate']);
     }
 
     /**
@@ -57,12 +57,28 @@ final class healthcare {
         return $instance;
     }
 
+    /**
+     * Define all the contant for future use
+     */
     public function define_constants(){
         define( 'SHC_VERSION', self::version );
         define( 'SHC_FILE', __FILE__ );
         define( 'SHC_PATH', __DIR__ );
         define( 'SHC_URL', plugins_url( '',SHC_FILE ) );
         define( 'SHC_ASSETS', SHC_URL . '/assets' );
+    }
+
+    /**
+     * Plugin version storing call back function defination
+     */
+    public function activate(){
+
+        $installed = get_option( 'shc_installed' );
+        if( !$installed){
+            update_option( 'shc_installed', time());
+        }
+
+        update_option( 'shc_version', SHC_VERSION);
     }
 }
 

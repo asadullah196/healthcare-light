@@ -54,6 +54,10 @@ final class healthcare {
 
     public function define_constants(){
         define( 'SHC_VERSION', self::version );
+        define( 'SHC_FILE', __FILE__ );
+        define( 'SHC_PATH', __DIR__ );
+        define( 'SHC_URL', plugins_url('',SHC_FILE ) );
+        define( 'SHC_ASSETS', SHC_URL./assets );
     }
 }
 

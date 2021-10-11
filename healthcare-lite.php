@@ -20,6 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+/**
+ * Call autoloader file
+ */
+require_once __DIR__."/vendor/autoload.php";
+
 /** 
  * Main plugin class, declear as final so that no one can extends this class
 */

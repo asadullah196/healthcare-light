@@ -1,0 +1,19 @@
+{
+    "name": "galib1996/hospital-light",
+    "description": "A private clinic and doctor's chamber managment system",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Galib1996\\HospitalLight\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Asadullah Galib",
+            "email": "md.asadullah196@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

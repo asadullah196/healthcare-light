@@ -11,7 +11,7 @@ class Menu {
     }
 
     public function admin_menu(){
-        add_menu_page( __('HealthCare Lite','healthcare-lite'), __('HealthCare','healthcare-lite'), 'manage_options', 'healthcare-lite', [$this, 'plugin_page'], 'dashicons-image-filter');
+        add_menu_page( __('HealthCare Lite','healthcare-lite'), __('HealthCare','healthcare-lite'), 'manage_options', 'healthcare-lite', [$this, 'plugin_page'], 'dashicons-image-filter', 20);
     }
 
     public function plugin_page(){

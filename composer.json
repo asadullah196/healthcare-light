@@ -1,0 +1,14 @@
+{
+    "name": "galib1996/healthcare-lite",
+    "description": "A clinic and doctor's chamber management wordpress plugin.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Galib1996\\HealthcareLite\\": "includes/"
+        }
+    },
+    "files": [],
+    "minimum-stability": "dev",
+    "require": {}
+}

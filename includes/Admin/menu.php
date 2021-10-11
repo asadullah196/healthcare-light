@@ -11,10 +11,27 @@ class Menu {
     }
 
     public function admin_menu(){
-        add_menu_page( __('HealthCare Lite','healthcare-lite'), __('HealthCare','healthcare-lite'), 'manage_options', 'healthcare-lite', [$this, 'plugin_page'], 'dashicons-image-filter', 20);
+
+        $parent_slug = 'healthcare-lite';
+        $capability = 'manage_options';
+
+        add_menu_page( __('Healthcare Lite','healthcare-lite'), __('Healthcare Lite','healthcare-lite'), $capability, $parent_slug, [$this, 'healthcare_dashboard_doc'], 'dashicons-image-filter', 20);
+
+        add_submenu_page( $parent_slug, __('Dashboard','healthcare-lite'), __('Dashboard','healthcare-lite'), $capability, $parent_slug, [$this, 'healthcare_dashboard_doc']);
+        add_submenu_page( $parent_slug, __('Add Doctor','healthcare-lite'), __('Add Doctor','healthcare-lite'), $capability, 'healthcare-lite-add-doc', [$this, 'add_doctor']);
     }
 
-    public function plugin_page(){
+    /**
+     * healthcare_dashboard_doc call back define
+     */
+    public function healthcare_dashboard_doc(){
         echo "Hello Doctors!";
+    }
+
+    /**
+     * add_doctor call back define
+     */
+    public function add_doctor(){
+        echo "Hello Doctors! Want to Work for us?";
     }
 }

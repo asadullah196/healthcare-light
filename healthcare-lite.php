@@ -80,7 +80,15 @@ final class healthcare {
      * @return void
      */
     public function init_plugin(){
-        new Galib1996\HealthcareLite\Admin\menu();
+
+        /**
+         * If it access from admin pannel, it will work
+         */
+        if( is_admin() ){
+            new Galib1996\HealthcareLite\Admin();
+        }else{
+            
+        }
     }
     /**
      * Plugin version storing call back function defination

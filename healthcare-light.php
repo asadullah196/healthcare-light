@@ -41,6 +41,7 @@ final class healthcare {
          * Register activation hook to check plugin version
          */
         register_activation_hook( __FILE__, [$this, 'activate']);
+        add_action( 'plugins_loaded', [$this, 'init_plugin'] );
     }
 
     /**
@@ -68,6 +69,14 @@ final class healthcare {
         define( 'SHC_ASSETS', SHC_URL . '/assets' );
     }
 
+    /**
+     * Initialize the plugin
+     * 
+     * @return void
+     */
+    public function init_plugin(){
+
+    }
     /**
      * Plugin version storing call back function defination
      */

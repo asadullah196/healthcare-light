@@ -80,7 +80,7 @@ final class healthcare {
      * @return void
      */
     public function init_plugin(){
-
+        new Galib1996\HealthcareLite\Admin\menu();
     }
     /**
      * Plugin version storing call back function defination

@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Galib1996\\HospitalLight\\' => array($baseDir . '/src'),
+    'Galib1996\\HospitalLight\\' => array($baseDir . '/includes'),
 );

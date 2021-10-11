@@ -5,7 +5,7 @@
     "license": "GPLv2",
     "autoload": {
         "psr-4": {
-            "Galib1996\\HospitalLight\\": "src/"
+            "Galib1996\\HospitalLight\\": "includes/"
         }
     },
     "authors": [

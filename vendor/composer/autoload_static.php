@@ -16,7 +16,7 @@ class ComposerStaticInit8343ed2fe1d68a7f98feeee9b534e776
     public static $prefixDirsPsr4 = array (
         'Galib1996\\HospitalLight\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/includes',
         ),
     );
 

@@ -87,7 +87,7 @@ final class healthcare {
         if( is_admin() ){
             new Galib1996\HealthcareLite\Admin();
         }else{
-            
+            new \Galib1996\HealthcareLite\Frontend();
         }
     }
     /**

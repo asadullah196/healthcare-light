@@ -2,14 +2,40 @@
 
 namespace Galib1996\HealthcareLite\Admin\Widgets;
 
+/**
+ * Dashboard handler
+ */
 class Dashboard
 {
     public function admin_dashboard()
     {
-        $template = __DIR__.'/Admin-dashboard.php';
-        include $template;
+
+        $action = isset( $_GET['action'] ) ? $_GET['action'] : 'dashboard';
+
+        switch ( $action ) {
+            
+            case 'new':
+                $template = __DIR__ . '/add/add-patient.php';
+                break;
+
+            case 'view':
+                $template = __DIR__ . '/add/view-patient.php';
+                break;
+
+            default:
+                $template = __DIR__ . '/add/dashboard.php';
+                break;
+        }
+
+        if ( file_exists( $template ) ) {
+            include $template;
+        }
     }
 
+    /*
+
+     $template = __DIR__.'/Admin-dashboard.php';
+        include $template;
     public function staff_dashboard()
     {
         echo "I am from staff dashboard";
@@ -23,5 +49,5 @@ class Dashboard
     public function patient_dashboard()
     {
         echo "I am from patient dashboard";
-    }
+    }*/
 }

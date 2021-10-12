@@ -1,3 +1,3 @@
 <div class="wrap">
-    <h1><?php _e('Hello Doc++++!','healthcare-lite');?></h1>
+    <h1><?php _e('Add New Patient!','healthcare-lite');?></h1>
 </div>

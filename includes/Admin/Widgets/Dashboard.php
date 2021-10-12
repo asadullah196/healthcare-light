@@ -6,7 +6,8 @@ class Dashboard
 {
     public function admin_dashboard()
     {
-        echo "I am from admin dashboard";
+        $template = __DIR__.'/Admin-dashboard.php';
+        include $template;
     }
 
     public function staff_dashboard()

@@ -14,7 +14,7 @@ class Dashboard
 
         switch ( $action ) {
             
-            case 'new':
+            case 'add':
                 $template = __DIR__ . '/add/add-patient.php';
                 break;
 

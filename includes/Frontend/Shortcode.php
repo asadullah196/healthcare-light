@@ -5,12 +5,14 @@ namespace Galib1996\HealthcareLite\Frontend;
 /**
  * Shortcode handler class
  */
-class Shortcode {
+class Shortcode
+{
     /**
      * Initializes the class
      */
-    function __construct() {
-        add_shortcode( 'healthcare-lite', [$this, 'render_shortcode']);
+    function __construct()
+    {
+        add_shortcode('healthcare-lite', [$this, 'render_shortcode']);
     }
 
     /**
@@ -21,7 +23,8 @@ class Shortcode {
      * 
      * @return string
      */
-    public function render_shortcode( $atts, $content = '' ) {
+    public function render_shortcode($atts, $content = '')
+    {
         return "Hello from healthcare shortcode plugin frontend!";
     }
 }

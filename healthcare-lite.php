@@ -115,5 +115,3 @@ function healthcare(){
 
 // kick-off the plugin
 healthcare();
-
-?>

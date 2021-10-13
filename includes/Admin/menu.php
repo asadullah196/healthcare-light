@@ -22,6 +22,9 @@ class Menu
         $capabilityAdmin = 'manage_options';
         $capabilityEditor = 'editor';
 
+        /**
+         * Admin menu starts here
+         */
         add_menu_page(__('Healthcare Lite', 'healthcare-lite'), __('Healthcare Lite', 'healthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard'], 'dashicons-image-filter', 20);
 
         add_submenu_page($parent_slug, __('Dashboard', 'healthcare-lite'), __('Dashboard', 'healthcare-lite-dashboard'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard']);
@@ -36,7 +39,11 @@ class Menu
 
         add_submenu_page($parent_slug, __('Profile', 'healthcare-lite'), __('Profile', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-profile', [$this, 'healthcare_admin_profile']);
 
-        
+        /**
+         * Doctor's menu starts here
+         */
+        add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'healthcare-lite'), $capabilityEditor, 'healthcare-lite-doctor-dashboard', [$this, 'healthcare_doctor_doctor']);
+
     }
 
     /**
@@ -48,16 +55,9 @@ class Menu
         $doctors->admin_dashboard();
     }
 
-    /**
-     * add_doctor call back define
-     */
-    public function add_doctor()
+    public function healthcare_admin_doctor()
     {
-        echo "Hello Doctors! Want to Work for us?";
+        echo "Sorry!";
     }
 
-    public function add_patient()
-    {
-        echo "Hello Patient! Want to Work for us?";
-    }
 }

@@ -19,12 +19,16 @@ class Menu
     {
 
         $parent_slug = 'healthcare-lite';
-        $capability = 'manage_options';
+        $capabilityAdmin = 'manage_options';
+        $capabilityEditor = 'editor';
 
-        add_menu_page(__('Healthcare Lite', 'healthcare-lite'), __('Healthcare Lite', 'healthcare-lite'), $capability, $parent_slug, [$this, 'healthcare_dashboard'], 'dashicons-image-filter', 20);
+        add_menu_page(__('Healthcare Lite', 'healthcare-lite'), __('Healthcare Lite', 'healthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_dashboard'], 'dashicons-image-filter', 20);
 
-        add_submenu_page($parent_slug, __('Dashboard', 'healthcare-lite'), __('Dashboard', 'healthcare-lite'), $capability, $parent_slug, [$this, 'healthcare_dashboard']);
-        add_submenu_page($parent_slug, __('Add Doctor', 'healthcare-lite'), __('Add Doctor', 'healthcare-lite'), $capability, 'healthcare-lite-add-doc', [$this, 'add_doctor']);
+        add_submenu_page($parent_slug, __('Dashboard', 'healthcare-lite'), __('Dashboard', 'healthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_dashboard']);
+
+        add_submenu_page($parent_slug, __('Add Doctor', 'healthcare-lite'), __('Add Doctor', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-add-doc', [$this, 'add_doctor']);
+
+        add_submenu_page($parent_slug, __('Add Patient', 'healthcare-lite'), __('Add Patient', 'healthcare-lite'), $capabilityEditor, 'healthcare-lite-add-patient', [$this, 'add_patient']);
     }
 
     /**
@@ -42,5 +46,10 @@ class Menu
     public function add_doctor()
     {
         echo "Hello Doctors! Want to Work for us?";
+    }
+
+    public function add_patient()
+    {
+        echo "Hello Patient! Want to Work for us?";
     }
 }

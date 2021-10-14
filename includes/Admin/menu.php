@@ -57,7 +57,7 @@ class Menu
 
     public function healthcare_admin_doctor()
     {
-        echo "Sorry!";
+        include __DIR__ . '/Template/admin/admin-sorry.php';
     }
 
 }

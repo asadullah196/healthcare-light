@@ -25,7 +25,7 @@ class Menu
         /**
          * Admin menu starts here
          */
-        add_menu_page(__('Healthcare Lite', 'healthcare-lite'), __('Healthcare Lite', 'healthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard'], 'dashicons-image-filter', 20);
+        $hook = add_menu_page(__('Healthcare Lite', 'healthcare-lite'), __('Healthcare Lite', 'healthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard'], 'dashicons-image-filter', 20);
 
         add_submenu_page($parent_slug, __('Dashboard', 'healthcare-lite'), __('Dashboard', 'healthcare-lite-dashboard'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard']);
 
@@ -43,7 +43,8 @@ class Menu
          * Doctor's menu starts here
          */
         add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'healthcare-lite'), $capabilityEditor, 'healthcare-lite-doctor-dashboard', [$this, 'healthcare_doctor_doctor']);
-
+        
+        add_action( 'admin_head-' . $hook, [ $this, 'enqueue_assets' ] );
     }
 
     /**
@@ -58,6 +59,15 @@ class Menu
     public function healthcare_admin_doctor()
     {
         include __DIR__ . '/Template/admin/admin-sorry.php';
+    }
+
+    /**
+     * Enqueue scripts and styles
+     *
+     * @return void
+     */
+    public function enqueue_assets() {
+        wp_enqueue_style( 'academy-admin-style' );
     }
 
 }

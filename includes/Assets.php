@@ -14,6 +14,6 @@ class Assets{
 
     public function enqueue_assets()
     {
-        wp_enqueue_script('shc-script', SHC_ASSETS.'/js/frontend.js', false, SHC_VERSION, true);
+        wp_enqueue_script('shc-script', SHC_ASSETS.'/js/frontend.js', false, filemtime( SHC_PATH.'/assets/js/fronend.js' ), true);
     }
 }

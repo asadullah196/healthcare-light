@@ -81,6 +81,8 @@ final class healthcare {
      */
     public function init_plugin(){
 
+        new Galib1996\HealthcareLite\Assets();
+
         /**
          * If it access from admin pannel, it will work
          */

@@ -25,6 +25,6 @@ class Shortcode
      */
     public function render_shortcode($atts, $content = '')
     {
-        return "Hello from healthcare shortcode plugin frontend!";
+        return '<div class="fmadam">Hello from healthcare shortcode plugin frontend!</div>';
     }
 }

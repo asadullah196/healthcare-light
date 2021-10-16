@@ -2,7 +2,6 @@
 
 namespace Galib1996\HealthcareLite\Admin;
 
-use Galib1996\HealthcareLite\Admin\Widgets\AdminDashboard;
 use Galib1996\HealthcareLite\Admin\Widgets\Dashboard;
 
 /**

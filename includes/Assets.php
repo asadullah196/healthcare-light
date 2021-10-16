@@ -16,8 +16,5 @@ class Assets{
     {
         wp_register_script('shc-script', SHC_ASSETS.'/js/frontend.js', false, filemtime( SHC_PATH.'/assets/js/fronend.js' ), true);
         wp_register_style('shc-style', SHC_ASSETS.'/css/frontend.css', false, filemtime( SHC_PATH.'/assets/css/fronend.css' ) );
-
-        wp_enqueue_script('shc-script');
-        wp_enqueue_style('shc-style');
     }
 }

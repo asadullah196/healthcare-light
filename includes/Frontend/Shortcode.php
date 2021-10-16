@@ -25,6 +25,9 @@ class Shortcode
      */
     public function render_shortcode($atts, $content = '')
     {
+        wp_enqueue_script('shc-script');
+        wp_enqueue_style('shc-style');
+        
         return '<div class="fmadam">Hello from healthcare shortcode plugin frontend!</div>';
     }
 }

@@ -66,7 +66,7 @@ class Menu
      * @return void
      */
     public function enqueue_assets() {
-        wp_enqueue_style( 'academy-admin-style' );
+        wp_enqueue_style( 'shc-admin-style' );
     }
 
 }

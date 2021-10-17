@@ -40,6 +40,10 @@ class Assets{
             'shc-style' => [
                 'src' => SHC_ASSETS.'/css/frontend.css',
                 'version' => filemtime( SHC_PATH . '/assets/css/frontend.css' ),
+            ],
+            'shc-admin-style' => [
+                'src' => SHC_ASSETS.'/css/admin.css',
+                'version' => filemtime( SHC_PATH . '/assets/css/admin.css' ),
             ]
         ];
     }

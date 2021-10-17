@@ -15,15 +15,15 @@ class Assets{
     /**
      * Return all the scripts like js
      * 
-     * @return array
+     * @return \array
      */
 
     public function get_scripts(){
         return [
             'shc-script' => [
                 'src' => SHC_ASSETS.'/js/frontend.js',
-                'version' => filemtime( SHC_PATH.'/assets/js/fronend.js' ),
-                'deps' => ['jquery'],
+                'version' => filemtime( SHC_PATH . '/assets/js/frontend.js' ),
+                'deps' => ['jquery']
             ]
             
         ];
@@ -39,7 +39,7 @@ class Assets{
         return [
             'shc-style' => [
                 'src' => SHC_ASSETS.'/css/frontend.css',
-                'version' => filemtime( SHC_PATH.'/assets/css/fronend.css' ),
+                'version' => filemtime( SHC_PATH . '/assets/css/frontend.css' ),
             ]
         ];
     }
@@ -53,7 +53,7 @@ class Assets{
         foreach ( $scripts as $handle => $scripts)
         {
             $deps = isset ( $scripts['deps']) ? $scripts['deps'] : false;
-            wp_register_script( $handle, $scripts['src'], $deps, $scripts, true);
+            wp_register_script( $handle, $scripts['src'], $deps, $scripts['version'], true);
         }
 
         /**
@@ -63,7 +63,7 @@ class Assets{
         foreach ( $styles as $handle => $styles)
         {
             $deps = isset ( $styles['deps']) ? $styles['deps'] : false;
-            wp_register_style( $handle, $styles['src'], $deps, $styles, );
+            wp_register_style( $handle, $styles['src'], $deps, $styles['version'], );
         }
     }
 }

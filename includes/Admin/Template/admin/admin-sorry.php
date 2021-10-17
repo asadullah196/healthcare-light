@@ -1,4 +1,9 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<?php
+    /**
+     * Bootsrap calling here
+     */
+    wp_enqueue_style( 'shc-admin-bootstrap' );
+?>
 
 <div class="wrap">
     <div class="page-wrap d-flex flex-row align-items-center">

@@ -44,6 +44,10 @@ class Assets{
             'shc-admin-style' => [
                 'src' => SHC_ASSETS.'/css/admin.css',
                 'version' => filemtime( SHC_PATH . '/assets/css/admin.css' ),
+            ],
+            'shc-admin-bootstrap' => [
+                'src' => SHC_ASSETS.'/css/bootstrap.min.css',
+                'version' => filemtime( SHC_PATH . '/assets/css/bootstrap.min.css' ),
             ]
         ];
     }

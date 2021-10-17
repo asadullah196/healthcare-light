@@ -9,6 +9,15 @@ class Dashboard
 {
     public function admin_dashboard()
     {
+        include $template = __DIR__ . '/add/dashboard.php';
+
+    }
+
+    /**
+     * Admin panel doctor's design
+     */
+    public function doctors_dashboard()
+    {
 
         $action = isset( $_GET['action'] ) ? $_GET['action'] : 'dashboard';
 
@@ -23,7 +32,7 @@ class Dashboard
                 break;
 
             default:
-                $template = __DIR__ . '/add/dashboard.php';
+                $template = __DIR__ . '/add/doctor-panel.php';
                 break;
         }
 

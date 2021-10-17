@@ -42,8 +42,8 @@ class Menu
          * Doctor's menu starts here
          */
         add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'healthcare-lite'), $capabilityEditor, 'healthcare-lite-doctor-dashboard', [$this, 'healthcare_doctor_doctor']);
-        
-        add_action( 'admin_head-' . $hook, [ $this, 'enqueue_assets' ] );
+
+        add_action('admin_head-' . $hook, [$this, 'enqueue_assets']);
     }
 
     /**
@@ -51,11 +51,17 @@ class Menu
      */
     public function healthcare_admin_dashboard()
     {
-        $doctors = new Dashboard();
-        $doctors->admin_dashboard();
+        $admin = new Dashboard();
+        $admin->admin_dashboard();
     }
 
     public function healthcare_admin_doctor()
+    {
+        $doctors = new Dashboard();
+        $doctors->doctors_dashboard();
+    }
+
+    public function healthcare_admin_patient()
     {
         include __DIR__ . '/Template/admin/admin-sorry.php';
     }
@@ -65,8 +71,8 @@ class Menu
      *
      * @return void
      */
-    public function enqueue_assets() {
-        wp_enqueue_style( 'shc-admin-style' );
+    public function enqueue_assets()
+    {
+        wp_enqueue_style('shc-admin-style');
     }
-
 }

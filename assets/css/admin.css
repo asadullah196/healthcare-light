@@ -5,3 +5,14 @@
     width: 980px;
     border-radius: 10px;
 }
+
+.admin-dashboard-card {
+    background: #a159f9 !important;
+}
+
+.card-body {
+    all: unset;
+    -ms-flex: 1 1 auto;
+    flex    : 1 1 auto;
+    padding: 0;
+}

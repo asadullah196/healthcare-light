@@ -4,7 +4,12 @@
  * Bootsrap calling here
  */
 wp_enqueue_style('shc-admin-bootstrap');
+wp_enqueue_style('shc-admin-style');
+
+echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">';
+
 ?>
+
 
 <div class="wrap">
     <div class="admin-heading row">
@@ -13,32 +18,16 @@ wp_enqueue_style('shc-admin-bootstrap');
     </div>
     <div class="admin-topmenu">
         <div class="row">
-            <div class="card text-white bg-primary col-md-3 mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-secondary col-md-3 mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Secondary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-success col-md-3 mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Success card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-danger col-md-3 mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Danger card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="text-white col-md-3 admin-dashboard-card">
+                <div class="row">
+                    <div class="col-md-3">
+                    <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h1><span><i class="bi bi-arrow-right-square-fill"></i></span><i class="bi bi-arrow-right-square-fill"></i>Total Patients</h1>
+                        <i class="bi-github" role="img" aria-label="GitHub"></i>
+                        <p>05</p>
+                    </div>
                 </div>
             </div>
         </div>

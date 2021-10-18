@@ -48,7 +48,7 @@ class Assets{
             'shc-admin-bootstrap' => [
                 'src' => SHC_ASSETS.'/css/bootstrap.min.css',
                 'version' => filemtime( SHC_PATH . '/assets/css/bootstrap.min.css' ),
-            ]
+            ],
         ];
     }
 

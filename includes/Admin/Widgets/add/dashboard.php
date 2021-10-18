@@ -21,7 +21,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="text-white col-md-3 text-center admin-dashboard-card">
                 <div class="row">
                     <div class="col-md-3">
-                        <br/>
+                        <br />
                         <i class="bi bi-people-fill"></i>
                     </div>
                     <div class="col-md-9">
@@ -33,7 +33,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="text-white col-md-4 text-center admin-dashboard-card">
                 <div class="row">
                     <div class="col-md-3">
-                        <br/>
+                        <br />
                         <i class="bi bi-people-fill"></i>
                     </div>
                     <div class="col-md-9">
@@ -45,18 +45,25 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="text-white col-md-4 text-center admin-dashboard-card">
                 <div class="row">
                     <div class="col-md-3">
-                        <br/>
+                        <br />
                         <i class="bi bi-people-fill"></i>
                     </div>
                     <div class="col-md-9">
-                        <p id="card-title">Pending Appointment</p>
+                        <p id="card-title"><?php _e('Pending Appointment', 'healthcare-lite'); ?></p>
                         <p>05</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="admin-quickaction"></div>
+    <div class="admin-quickaction">
+        <div class="row">
+
+            <a href="<?php echo admin_url('admin.php?page=healthcare-lite&action=add'); ?>" class="page-title-action"><?php _e('Add Patient', 'healthcare-lite'); ?></a>
+
+            <a href="<?php echo admin_url('admin.php?page=healthcare-lite&action=view'); ?>" class="page-title-action"><?php _e('View Patients', 'healthcare-lite'); ?></a>
+        </div>
+    </div>
     <div class="admin-analytics"></div>
     <div class="admin-footer"></div>
 

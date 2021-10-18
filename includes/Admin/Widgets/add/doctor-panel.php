@@ -6,5 +6,5 @@
 
     <a href="<?php echo admin_url( 'admin.php?page=healthcare-lite&action=view' ); ?>" class="page-title-action"><?php _e( 'View Patients', 'healthcare-lite' ); ?></a>
 
-    <h1 class="madamf">Sorry Doctor Bhai!</h1>;
+    <h1 class="madamf">Sorry Doctor Bhai!</h1>
 </div>

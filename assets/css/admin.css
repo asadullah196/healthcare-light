@@ -6,14 +6,12 @@
     border-radius: 10px;
 }
 
-.mr-10{
-    margin-right: 10px !important;
-}
 .admin-dashboard-card {
     background: #a159f9;
     border-radius: 10px;
     padding-left: 20px !important;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .admin-dashboard-card i, .admin-dashboard-card p {

@@ -6,13 +6,21 @@
     border-radius: 10px;
 }
 
+.mr-10{
+    margin-right: 10px !important;
+}
 .admin-dashboard-card {
-    background: #a159f9 !important;
+    background: #a159f9;
+    border-radius: 10px;
+    padding-left: 20px !important;
 }
 
-.card-body {
-    all: unset;
-    -ms-flex: 1 1 auto;
-    flex    : 1 1 auto;
-    padding: 0;
+.admin-dashboard-card i, .admin-dashboard-card p {
+    font-size: 36px;
+}
+
+#card-title {
+    font-size: 18px;
+    margin-bottom: -10px;
+    margin-top: 12px;
 }

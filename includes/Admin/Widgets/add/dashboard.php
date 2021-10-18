@@ -60,9 +60,35 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
     <div class="admin-quickaction">
         <div class="row">
 
+            <?php
+                // Drive admin to the patinet appointment booking page
+                $action = isset( $_GET['action'] ) ? $_GET['action'] : 'dashboard';
+
+                switch ( $action ) {
+                    
+                    case 'add':
+                        $template = __DIR__ . '/add/add-patient.php';
+                        break;
+
+                    case 'view':
+                        $template = __DIR__ . '/add/view-patient.php';
+                        break;
+
+                    default:
+                        $template = __DIR__ . '/add/dashboard.php';
+                        break;
+                }
+
+                if ( file_exists( $template ) ) {
+                    include $template;
+                }
+            ?>
+
             <a href="<?php echo admin_url('admin.php?page=healthcare-lite&action=add'); ?>" class="page-title-action"><?php _e('Add Patient', 'healthcare-lite'); ?></a>
 
             <a href="<?php echo admin_url('admin.php?page=healthcare-lite&action=view'); ?>" class="page-title-action"><?php _e('View Patients', 'healthcare-lite'); ?></a>
+
+            
         </div>
     </div>
     <div class="admin-analytics"></div>

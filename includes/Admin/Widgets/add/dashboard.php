@@ -25,7 +25,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                         <i class="bi bi-people-fill"></i>
                     </div>
                     <div class="col-md-9">
-                        <p id="card-title">Total Patients</p>
+                        <p id="card-title"><?php _e('Total Patients', 'healthcare-lite'); ?></p>
                         <p>05</p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                         <i class="bi bi-people-fill"></i>
                     </div>
                     <div class="col-md-9">
-                        <p id="card-title">Current Appointment</p>
+                        <p id="card-title"><?php _e('Current Appointment', 'healthcare-lite'); ?></p>
                         <p>05</p>
                     </div>
                 </div>
@@ -67,5 +67,5 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
     <div class="admin-analytics"></div>
     <div class="admin-footer"></div>
 
-    <h1 class="madamf">Sorry Doctor Bhai!</h1>;
+    <h1 class="madamf">Sorry Doctor Bhai!</h1>
 </div>

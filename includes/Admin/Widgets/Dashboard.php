@@ -13,11 +13,19 @@ class Dashboard
 
         switch ( $action ) {
             
-            case 'add':
+            case 'addap':
                 $template = __DIR__ . '/add/add-patient.php';
                 break;
 
-            case 'view':
+            case 'viewap':
+                $template = __DIR__ . '/add/view-patient.php';
+                break;
+
+            case 'addpa':
+                $template = __DIR__ . '/add/add-patient.php';
+                break;
+
+            case 'viewpa':
                 $template = __DIR__ . '/add/view-patient.php';
                 break;
 

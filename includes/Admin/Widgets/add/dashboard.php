@@ -84,7 +84,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                 include $template;
             }
             ?>
-
+            
             <a href="<?php echo admin_url('admin.php?page=healthcare-lite&action=add'); ?>" class="page-title-action"><?php _e('Add Patient', 'healthcare-lite'); ?></a>
 
             <a href="<?php echo admin_url('admin.php?page=healthcare-lite&action=view'); ?>" class="page-title-action"><?php _e('View Patients', 'healthcare-lite'); ?></a>

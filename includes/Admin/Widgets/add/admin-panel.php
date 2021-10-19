@@ -1,8 +1,51 @@
+
+
 <div class="wrap">
     <div class="row">
         <div class="admin-heading row">
             <h1 class="wp-heading-inline"><?php _e('Admin Dashboard!', 'healthcare-lite'); ?></h1>
             <br /><br /><br />
+        </div>
+    </div>
+
+    <div class="admin-topmenu">
+        <div class="row">
+            <div class="text-white col-md-3 text-center admin-dashboard-card">
+                <div class="row">
+                    <div class="col-md-3">
+                        <br />
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <p id="card-title"><?php _e('Total Patients', 'healthcare-lite'); ?></p>
+                        <p>05</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white col-md-4 text-center admin-dashboard-card">
+                <div class="row">
+                    <div class="col-md-3">
+                        <br />
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <p id="card-title"><?php _e('Current Appointment', 'healthcare-lite'); ?></p>
+                        <p>05</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white col-md-4 text-center admin-dashboard-card">
+                <div class="row">
+                    <div class="col-md-3">
+                        <br />
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <p id="card-title"><?php _e('Pending Appointment', 'healthcare-lite'); ?></p>
+                        <p>05</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

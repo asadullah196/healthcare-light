@@ -1,4 +1,13 @@
+<?php
 
+/**
+ * Bootsrap calling here
+ */
+wp_enqueue_style('shc-admin-bootstrap');
+wp_enqueue_style('shc-admin-style');
+
+
+?>
 
 <div class="wrap">
     <div class="row">

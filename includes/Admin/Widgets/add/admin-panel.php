@@ -6,6 +6,10 @@
 wp_enqueue_style('shc-admin-bootstrap');
 wp_enqueue_style('shc-admin-style');
 
+/**
+ * Bootsrap icon calling with CDN
+ */
+echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">';
 
 ?>
 

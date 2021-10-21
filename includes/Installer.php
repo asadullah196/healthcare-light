@@ -7,6 +7,11 @@ namespace Galib1996\HealthcareLite;
  */
 class Installer
 {
+    /**
+     * Run the installer
+     * 
+     * @return void
+     */
     public function run()
     {
         $this->add_version();

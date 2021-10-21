@@ -97,12 +97,8 @@ final class healthcare {
      */
     public function activate(){
 
-        $installed = get_option( 'shc_installed' );
-        if( !$installed){
-            update_option( 'shc_installed', time());
-        }
-
-        update_option( 'shc_version', SHC_VERSION);
+        $installer = new \Galib1996\HealthcareLite\Installer();
+        $installer->run();
     }
 }
 

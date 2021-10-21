@@ -14,7 +14,7 @@ class Dashboard
         switch ( $action ) {
             
             case 'addap':
-                $template = __DIR__ . '/add/add-patient.php';
+                $template = __DIR__ . '/add/add-appointment.php';
                 break;
 
             case 'viewap':

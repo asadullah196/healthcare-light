@@ -13,7 +13,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
 
 ?>
 <div class="wrap">
-    <div class="admin-heading col">
+    <div class="admin-heading">
         <div class="row">
             <h1 class="wp-heading-inline"><?php _e('Admin Dashboard!', 'healthcare-lite'); ?></h1>
             <br /><br />

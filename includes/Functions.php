@@ -11,7 +11,7 @@ function shc_appointment( $args = [] ) {
     global $wpdb;
 
     if ( empty( $args['name'] ) ) {
-        return new \WP_Error( 'no-name', __( 'You must provide a name.', 'wedevs-academy' ) );
+        return new \WP_Error( 'no-name', __( 'You must provide a name.', 'healthcare-lite' ) );
     }
 
     $defaults = [

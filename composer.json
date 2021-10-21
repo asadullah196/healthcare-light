@@ -8,7 +8,7 @@
             "Galib1996\\HealthcareLite\\": "includes/"
         }
     },
-    "files": [],
+    "files": [ "includes/functions.php" ],
     "minimum-stability": "dev",
     "require": {}
 }

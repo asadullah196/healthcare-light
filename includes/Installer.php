@@ -48,6 +48,8 @@ class Installer
             require_once ABSPATH . 'wp-admin/includes/upgrade.php';
         }
 
+        shc_appointment();
+        
         dbDelta($schema);
     }
 }

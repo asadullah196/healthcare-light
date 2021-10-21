@@ -30,5 +30,6 @@ class Installer
 
     public function create_tables()
     {
+        global $wpdb;
     }
 }

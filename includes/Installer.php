@@ -34,7 +34,7 @@ class Installer
 
         $charset_collate = $wpdb->get_charset_collate();
 
-        $schema = "CREATE TABLE IF NOT EXISTS `{$wpdb->prefix}ac_addresses` (
+        $schema = "CREATE TABLE IF NOT EXISTS `{$wpdb->prefix}shc_appointment` (
           `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
           `name` varchar(100) NOT NULL DEFAULT '',
           `address` varchar(255) DEFAULT NULL,
@@ -43,5 +43,11 @@ class Installer
           `created_at` datetime NOT NULL,
           PRIMARY KEY (`id`)
         ) $charset_collate";
+
+        if (!function_exists('dbDelta')) {
+            require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        }
+
+        dbDelta($schema);
     }
 }

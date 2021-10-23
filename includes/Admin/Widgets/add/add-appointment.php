@@ -30,10 +30,10 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <label for="patientName"><?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
                     <input type="text" id="patientName" name="patientName" placeholder="<?php _e('Your Name', 'healthcare-lite'); ?>"><br><br>
 
-                    <label for="patientNumber">Phone Number:*<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
-                    <input type="text" id="patientNumber" name="patientNumber" placeholder="Phone Number<?php _e('Full Name:*', 'healthcare-litepa'); ?>"><br><br>
+                    <label for="patientNumber"><?php _e('Phone Number:*', 'healthcare-litepa'); ?></label>
+                    <input type="text" id="patientNumber" name="patientNumber" placeholder="<?php _e('Phone Number', 'healthcare-litepa'); ?>"><br><br>
 
-                    <label for="patientEmail">Email Address:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
+                    <label for="patientEmail"><?php _e('Email Address:', 'healthcare-litepa'); ?></label>
                     <input type="email" id="patientEmail" name="patientEmail" placeholder="<?php _e('Email Address', 'healthcare-litepa'); ?>"><br><br>
 
 

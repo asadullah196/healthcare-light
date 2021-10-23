@@ -34,7 +34,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <input type="text" id="patientNumber" name="patientNumber" placeholder="Phone Number"><br><br>
 
                     <label for="patientEmail">Email Address:</label>
-                    <input type="email" id="patientEmail" name="patientEmail" placeholder="Phone Number"><br><br>
+                    <input type="email" id="patientEmail" name="patientEmail" placeholder="Email Address"><br><br>
 
 
                     <label for="appDate">Appointment Date:</label>
@@ -59,10 +59,10 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <label for="lastVistNo">No</label><br><br>
 
                     <label for="patientAddress">Address:</label>
-                    <input type="text" id="patientAddress" name="patientAddress" placeholder="Phone Number"><br><br>
+                    <input type="text" id="patientAddress" name="patientAddress" placeholder="Your Address"><br><br>
 
                     <label for="patientNote">Special Notes(if any):</label><br>
-                    <textarea id="patientNote" name="patientNote" rows="4" cols="50"></textarea><br><br>
+                    <textarea id="patientNote" name="patientNote" rows="4" cols="50" placeholder="Add your specil note here!"></textarea><br><br>
 
                     <input type="submit" class="btn btn-primary" value="Book An Appointment"><br><br>
                 </form>

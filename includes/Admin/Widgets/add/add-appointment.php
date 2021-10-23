@@ -69,7 +69,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             </div>
             <div class="col-md-4">
                 <div class="appointment-schedule">
-                    <h3>Available Schedule<br/>In next 7 days</h3>
+                    <h3>Available Schedule<br />In next 7 days</h3>
                     <h4>Friday: <span>05</span></h4>
                     <h4>Friday: <span>05</span></h4>
                     <h4>Friday: <span>05</span></h4>

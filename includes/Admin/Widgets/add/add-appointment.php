@@ -27,31 +27,45 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="col-md-8">
                 <form action="#" method="post">
                     
-                        <label for="fname">Full Name:*</label>
-                        <input type="text" id="fname" name="fname" placeholder="Your Name">
-                    
-                        <label for="lname">Phone Number:*</label>
-                        <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+                    <label for="fname">Full Name:*</label>
+                    <input type="text" id="fname" name="fname" placeholder="Your Name"><br><br>
+                
+                    <label for="lname">Phone Number:*</label>
+                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
 
-                        <label for="lname">Email Address:</label>
-                        <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+                    <label for="lname">Email Address:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+
                     
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-                    <input type="submit" class="btn" value="Submit">
+                    <label for="lname">Appointment Date:</label>
+                    <input type="date" id="lname" name="lname" placeholder="Appointment Date"><br><br>
+                    
+                    <label for="lname">Appointment Type:</label><br>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> Regular</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> Urgent</label><br><br>
+
+                    <label for="lname">Gender:</label>
+                    <input type="radio" id="html" name="fav_language" value="Male">
+                    <label for="html">Male</label>
+                    <input type="radio" id="css" name="fav_language" value="Female">
+                    <label for="css">Female</label><br><br>
+
+                    <label for="lname">Have you visit us in last 3 month?</label>
+                    <input type="radio" id="html" name="fav_language" value="Male">
+                    <label for="html">Yes</label>
+                    <input type="radio" id="css" name="fav_language" value="Female">
+                    <label for="css">No</label><br><br>
+
+                    <label for="lname">Address:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+
+                    <label for="lname">Special Notes(if any):</label>
+                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+
+                    <input type="submit" class="btn" value="Book An Appointment">
                 </form>
-                <div class="appointment-form">
-                    <p>Name*</p>
-                    <p>Phone*</p>
-                    <p>Gender*</p>
-                    <p>Date of Birth*</p>
-                    <p>Address*</p>
-                    <p>Have you previously attended our facility?*</p>
-                    <p>Appointment Type*</p>
-                    <p>Date*</p>
-                    <p>Your Message*</p>
-                    <p>Book An Appointment</p>
-                </div>
             </div>
             <div class="col-md-3 offset-md-1">
                 <div class="appointment-schedule">

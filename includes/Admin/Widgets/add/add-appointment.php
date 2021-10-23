@@ -59,12 +59,12 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <label for="lastVistNo">No<?php _e('Full Name:*', 'healthcare-litepa'); ?></label><br><br>
 
                     <label for="patientAddress">Address:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
-                    <input type="text" id="patientAddress" name="patientAddress" placeholder="Your Address<?php _e('Full Name:*', 'healthcare-litepa'); ?>"><br><br>
+                    <input type="text" id="patientAddress" name="patientAddress" placeholder="<?php _e('Your Address', 'healthcare-litepa'); ?>"><br><br>
 
-                    <label for="patientNote">Special Notes(if any):<?php _e('Full Name:*', 'healthcare-litepa'); ?></label><br>
-                    <textarea id="patientNote" name="patientNote" rows="4" cols="50" placeholder="Add your specil note here!<?php _e('Full Name:*', 'healthcare-litepa'); ?>"></textarea><br><br>
+                    <label for="patientNote"><?php _e('Special Notes(if any):', 'healthcare-litepa'); ?></label><br>
+                    <textarea id="patientNote" name="patientNote" rows="4" cols="50" placeholder="<?php _e('Add your specil note here!', 'healthcare-litepa'); ?>"></textarea><br><br>
 
-                    <input type="submit" class="btn btn-primary" value="Book An Appointment<?php _e('Full Name:*', 'healthcare-litepa'); ?>"><br><br>
+                    <input type="submit" class="btn btn-primary" value="<?php _e('Book An Appointment', 'healthcare-litepa'); ?>"><br><br>
                 </form>
             </div>
             <div class="col-md-4">

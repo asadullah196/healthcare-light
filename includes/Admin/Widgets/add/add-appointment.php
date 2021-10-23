@@ -34,31 +34,31 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <input type="text" id="patientNumber" name="patientNumber" placeholder="Phone Number<?php _e('Full Name:*', 'healthcare-litepa'); ?>"><br><br>
 
                     <label for="patientEmail">Email Address:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
-                    <input type="email" id="patientEmail" name="patientEmail" placeholder="Email Address<?php _e('Full Name:*', 'healthcare-litepa'); ?>"><br><br>
+                    <input type="email" id="patientEmail" name="patientEmail" placeholder="<?php _e('Email Address', 'healthcare-litepa'); ?>"><br><br>
 
 
-                    <label for="appDate">Appointment Date:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
-                    <input type="date" id="appDate" name="appDate" placeholder="Appointment Date<?php _e('Full Name:*', 'healthcare-litepa'); ?>"><br><br>
+                    <label for="appDate"><?php _e('Appointment Date:', 'healthcare-litepa'); ?></label>
+                    <input type="date" id="appDate" name="appDate" placeholder="<?php _e('Appointment Date', 'healthcare-litepa'); ?>"><br><br>
 
-                    <label for="appType">Appointment Type:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
+                    <label for="appType"><?php _e('Appointment Type:', 'healthcare-litepa'); ?></label>
                     <input type="checkbox" id="appTypeRegular" name="appTypeRegular" value="regular">
-                    <label id="widthzero" for="appType"> Regular<?php _e('Full Name:*', 'healthcare-litepa'); ?> &nbsp;&nbsp;</label>
+                    <label id="widthzero" for="appType"><?php _e('Regular', 'healthcare-litepa'); ?> &nbsp;&nbsp;</label>
                     <input type="checkbox" id="appTypeUrgent" name="appTypeUrgent" value="Urgent">
-                    <label for="appTypeUrgent"> Urgent<?php _e('Full Name:*', 'healthcare-litepa'); ?></label><br><br>
+                    <label for="appTypeUrgent"> <?php _e('Urgent', 'healthcare-litepa'); ?></label><br><br>
 
-                    <label for="patientGender">Gender:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
+                    <label for="patientGender"><?php _e('Gender:', 'healthcare-litepa'); ?></label>
                     <input type="radio" id="patientGenderMale" name="patientGenderMale" value="Male">
-                    <label id="widthzero" for="patientGenderMale"> Male <?php _e('Full Name:*', 'healthcare-litepa'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label id="widthzero" for="patientGenderMale"> <?php _e('Male', 'healthcare-litepa'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="patientGenderFemale" name="patientGenderFemale" value="Female">
-                    <label for="patientGenderFemale">Female<?php _e('Full Name:*', 'healthcare-litepa'); ?></label><br><br>
+                    <label for="patientGenderFemale"><?php _e('Female', 'healthcare-litepa'); ?></label><br><br>
 
-                    <label for="lastVist">visited in last 3 month?<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
+                    <label for="lastVist"><?php _e('visited in last 3 month?', 'healthcare-litepa'); ?></label>
                     <input type="radio" id="lastVistYes" name="lastVistYes" value="Last Visit">
-                    <label id="widthzero" for="lastVistYes"> Yes <?php _e('Full Name:*', 'healthcare-litepa'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label id="widthzero" for="lastVistYes"> <?php _e('Yes', 'healthcare-litepa'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="lastVistNo" name="lastVistNo" value="No">
-                    <label for="lastVistNo">No<?php _e('Full Name:*', 'healthcare-litepa'); ?></label><br><br>
+                    <label for="lastVistNo"><?php _e('No', 'healthcare-litepa'); ?></label><br><br>
 
-                    <label for="patientAddress">Address:<?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
+                    <label for="patientAddress"><?php _e('Address:', 'healthcare-litepa'); ?></label>
                     <input type="text" id="patientAddress" name="patientAddress" placeholder="<?php _e('Your Address', 'healthcare-litepa'); ?>"><br><br>
 
                     <label for="patientNote"><?php _e('Special Notes(if any):', 'healthcare-litepa'); ?></label><br>

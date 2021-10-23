@@ -30,7 +30,5 @@ class Shortcode
         wp_enqueue_style('shc-style');
         
         include SHC_PATH . '/includes/Admin/Template/shortcode/shortcode.php';
-
-        return '<div class="fmadam">Hello from healthcare shortcode plugin frontend!</div>';
     }
 }

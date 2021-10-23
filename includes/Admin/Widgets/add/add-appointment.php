@@ -64,7 +64,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <label for="lname">Special Notes(if any):</label><br>
                     <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br><br>
 
-                    <input type="submit" class="btn" value="Book An Appointment"><br><br>
+                    <input type="submit" class="btn btn-primary" value="Book An Appointment"><br><br>
                 </form>
             </div>
             <div class="col-md-4">

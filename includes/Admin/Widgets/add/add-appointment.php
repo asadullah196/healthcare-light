@@ -27,42 +27,42 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="col-md-8 appointment-info">
                 <form action="#" method="post">
 
-                    <label for="fname">Full Name:*</label>
-                    <input type="text" id="fname" name="fname" placeholder="Your Name"><br><br>
+                    <label for="patientName">Full Name:*</label>
+                    <input type="text" id="patientName" name="patientName" placeholder="Your Name"><br><br>
 
-                    <label for="lname">Phone Number:*</label>
-                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+                    <label for="patientNumber">Phone Number:*</label>
+                    <input type="text" id="patientNumber" name="patientNumber" placeholder="Phone Number"><br><br>
 
-                    <label for="lname">Email Address:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+                    <label for="patientEmail">Email Address:</label>
+                    <input type="email" id="patientEmail" name="patientEmail" placeholder="Phone Number"><br><br>
 
 
-                    <label for="lname">Appointment Date:</label>
-                    <input type="date" id="lname" name="lname" placeholder="Appointment Date"><br><br>
+                    <label for="appDate">Appointment Date:</label>
+                    <input type="date" id="appDate" name="appDate" placeholder="Appointment Date"><br><br>
 
-                    <label for="lname">Appointment Type:</label>
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label id="widthzero" for="vehicle1"> Regular &nbsp;&nbsp;</label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                    <label for="vehicle2"> Urgent</label><br><br>
+                    <label for="appType">Appointment Type:</label>
+                    <input type="checkbox" id="appTypeRegular" name="appTypeRegular" value="regular">
+                    <label id="widthzero" for="appType"> Regular &nbsp;&nbsp;</label>
+                    <input type="checkbox" id="appTypeUrgent" name="appTypeUrgent" value="Urgent">
+                    <label for="appTypeUrgent"> Urgent</label><br><br>
 
-                    <label for="lname">Gender:</label>
-                    <input type="radio" id="html" name="fav_language" value="Male">
-                    <label id="widthzero" for="html"> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="radio" id="css" name="fav_language" value="Female">
-                    <label for="css">Female</label><br><br>
+                    <label for="patientGender">Gender:</label>
+                    <input type="radio" id="patientGenderMale" name="patientGenderMale" value="Male">
+                    <label id="widthzero" for="patientGenderMale"> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="radio" id="patientGenderFemale" name="patientGenderFemale" value="Female">
+                    <label for="patientGenderFemale">Female</label><br><br>
 
-                    <label for="lname">visited in last 3 month?</label>
-                    <input type="radio" id="html" name="fav_language" value="Male">
-                    <label id="widthzero" for="html"> Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="radio" id="css" name="fav_language" value="Female">
-                    <label for="css">No</label><br><br>
+                    <label for="lastVist">visited in last 3 month?</label>
+                    <input type="radio" id="lastVistYes" name="lastVistYes" value="Last Visit">
+                    <label id="widthzero" for="lastVistYes"> Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="radio" id="lastVistNo" name="lastVistNo" value="No">
+                    <label for="lastVistNo">No</label><br><br>
 
-                    <label for="lname">Address:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
+                    <label for="patientAddress">Address:</label>
+                    <input type="text" id="patientAddress" name="patientAddress" placeholder="Phone Number"><br><br>
 
-                    <label for="lname">Special Notes(if any):</label><br>
-                    <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br><br>
+                    <label for="patientNote">Special Notes(if any):</label><br>
+                    <textarea id="patientNote" name="patientNote" rows="4" cols="50"></textarea><br><br>
 
                     <input type="submit" class="btn btn-primary" value="Book An Appointment"><br><br>
                 </form>

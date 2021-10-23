@@ -28,26 +28,26 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="col-md-8 appointment-info">
                 <form action="#" method="post">
 
-                    <label for="fname">Full Name:*</label>
+                    <label for="fname">Full Name*</label>
                     <input type="text" id="fname" name="fname" placeholder="Your Name"><br><br>
 
-                    <label for="lname">Phone Number:*</label>
+                    <label for="lname">Phone Number*</label>
                     <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
 
-                    <label for="lname">Email Address:</label>
+                    <label for="lname">Email Address</label>
                     <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
 
 
-                    <label for="lname">Appointment Date:</label>
+                    <label for="lname">Appointment Date</label>
                     <input type="date" id="lname" name="lname" placeholder="Appointment Date"><br><br>
 
-                    <label for="lname">Appointment Type:</label>
+                    <label for="lname">Appointment Type</label>
                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                     <label id="widthzero" for="vehicle1"> Regular &nbsp;&nbsp;</label>
                     <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
                     <label for="vehicle2"> Urgent</label><br><br>
 
-                    <label for="lname">Gender:</label>
+                    <label for="lname">Gender</label>
                     <input type="radio" id="html" name="fav_language" value="Male">
                     <label id="widthzero" for="html"> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="css" name="fav_language" value="Female">
@@ -59,10 +59,10 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <input type="radio" id="css" name="fav_language" value="Female">
                     <label for="css">No</label><br><br>
 
-                    <label for="lname">Address:</label>
+                    <label for="lname">Address</label>
                     <input type="text" id="lname" name="lname" placeholder="Phone Number"><br><br>
 
-                    <label for="lname">Special Notes(if any):</label><br>
+                    <label for="lname">Special Notes(if any)</label><br>
                     <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br><br>
 
                     <input type="submit" class="btn btn-primary" value="Book An Appointment"><br><br>

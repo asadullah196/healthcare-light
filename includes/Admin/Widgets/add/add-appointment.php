@@ -27,7 +27,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="col-md-8 appointment-info">
                 <form action="#" method="post">
 
-                    <label for="patientName">Full Name:*</label>
+                    <label for="patientName"><?php _e('Full Name:*', 'healthcare-litepa'); ?></label>
                     <input type="text" id="patientName" name="patientName" placeholder="Your Name"><br><br>
 
                     <label for="patientNumber">Phone Number:*</label>

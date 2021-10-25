@@ -37,8 +37,30 @@ class Dashboard
         if ( file_exists( $template ) ) {
             include $template;
         }
-
     }
+
+    /**
+     * Handle the form
+     *
+     * @return void
+     */
+    public function appointment_handler() {
+        if ( ! isset( $_POST['submit_address'] ) ) {
+            return;
+        }
+
+        if ( ! wp_verify_nonce( $_POST['_wpnonce'], 'new-appointment' ) ) {
+            wp_die( 'Are you cheating Kid?' );
+        }
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_die( 'Are you cheating Manager?' );
+        }
+
+        var_dump( $_POST );
+        exit;
+    }
+
 
     /**
      * Admin panel doctor's design

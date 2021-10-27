@@ -7,46 +7,50 @@
  *
  * @return int|WP_Error
  */
-function shc_appointment( $args = [] ) {
+function shc_appointment($args = [])
+{
     global $wpdb;
 
-    if ( empty( $args['patientName'] ) ) {
-        return new \WP_Error( 'no-name', __( 'You must provide a name.', 'healthcare-lite' ) );
+    if (empty($args['patientName'])) {
+        return new \WP_Error('no-name', __('You must provide a name.', 'healthcare-lite'));
     }
 
     $defaults = [
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
-        'patientName'       => '',
+        'patientName'   => '',
+        'patientNumber' => '',
+        'patientEmail'  => '',
+        'appDate'       => '',
+        'appType'       => '',
+        'patientGender' => '',
+        'lastVist'      => '',
+        'patientAddress'    => '',
+        'patientNote'       => '',
         'created_by' => get_current_user_id(),
-        'created_at' => current_time( 'mysql' ),
+        'created_at' => current_time('mysql'),
     ];
 
-    $data = wp_parse_args( $args, $defaults );
+    $data = wp_parse_args($args, $defaults);
 
     $inserted = $wpdb->insert(
         $wpdb->prefix . 'shc_appointment',
         $data,
         [
             '%s',
-            '%s',
+            '%d',
             '%s',
             '%d',
-            '%s'
+            '%d',
+            '%d',
+            '%d',
+            '%s',
+            '%s',
+            '%s',
+            '%s',
         ]
     );
 
-    if ( ! $inserted ) {
-        return new \WP_Error( 'failed-to-insert', __( 'Failed to insert data', 'wedevs-academy' ) );
+    if (!$inserted) {
+        return new \WP_Error('failed-to-insert', __('Failed to insert data', 'wedevs-academy'));
     }
 
     return $wpdb->insert_id;

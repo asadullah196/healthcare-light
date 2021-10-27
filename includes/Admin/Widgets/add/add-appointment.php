@@ -40,19 +40,19 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <label for="appDate"><?php echo esc_html__('Appointment Date:', 'healthcare-lite'); ?></label>
                     <input type="date" id="appDate" name="appDate" placeholder="<?php echo esc_html__('Appointment Date', 'healthcare-lite'); ?>"><br><br>
 
-                    <label for="appType"><?php echo esc_html__('Appointment Type:', 'healthcare-lite'); ?></label>
+                    <label for="appType" id="appType" name="appType"><?php echo esc_html__('Appointment Type:', 'healthcare-lite'); ?></label>
                     <input type="checkbox" id="appTypeRegular" name="appTypeRegular" value="regular">
                     <label id="widthzero" for="appType"><?php echo esc_html__('Regular', 'healthcare-lite'); ?> &nbsp;&nbsp;</label>
                     <input type="checkbox" id="appTypeUrgent" name="appTypeUrgent" value="Urgent">
                     <label for="appTypeUrgent"> <?php echo esc_html__('Urgent', 'healthcare-lite'); ?></label><br><br>
 
-                    <label for="patientGender"><?php echo esc_html__('Gender:', 'healthcare-lite'); ?></label>
+                    <label for="patientGender" id="patientGender" name="patientGender"><?php echo esc_html__('Gender:', 'healthcare-lite'); ?></label>
                     <input type="radio" id="patientGenderMale" name="patientGenderMale" value="Male">
                     <label id="widthzero" for="patientGenderMale"> <?php echo esc_html__('Male', 'healthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="patientGenderFemale" name="patientGenderFemale" value="Female">
                     <label for="patientGenderFemale"><?php echo esc_html__('Female', 'healthcare-lite'); ?></label><br><br>
 
-                    <label for="lastVist"><?php echo esc_html__('visited in last 3 month?', 'healthcare-lite'); ?></label>
+                    <label for="lastVist" id="lastVist" name="lastVist"><?php echo esc_html__('visited in last 3 month?', 'healthcare-lite'); ?></label>
                     <input type="radio" id="lastVistYes" name="lastVistYes" value="Last Visit">
                     <label id="widthzero" for="lastVistYes"> <?php echo esc_html__('Yes', 'healthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="lastVistNo" name="lastVistNo" value="No">

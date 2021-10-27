@@ -57,7 +57,7 @@ class Dashboard
             wp_die( 'Are you cheating Manager?' );
         }
 
-        var_dump( shc_appointment() );
+        //var_dump(shc_appointment());
         var_dump( $_POST );
         exit;
     }

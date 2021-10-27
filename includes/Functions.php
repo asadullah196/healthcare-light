@@ -15,9 +15,18 @@ function shc_appointment( $args = [] ) {
     }
 
     $defaults = [
-        'name'       => '',
-        'address'    => '',
-        'phone'      => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
+        'patientName'       => '',
         'created_by' => get_current_user_id(),
         'created_at' => current_time( 'mysql' ),
     ];

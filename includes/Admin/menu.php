@@ -24,24 +24,24 @@ class Menu
         /**
          * Admin menu starts here
          */
-        $hook = add_menu_page(__('Healthcare Lite', 'healthcare-lite'), __('Healthcare Lite', 'healthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard'], 'dashicons-image-filter', 20);
+        $hook = add_menu_page(__('Healthcare Lite', 'shchealthcare-lite'), __('Healthcare Lite', 'shchealthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard'], 'dashicons-image-filter', 20);
 
-        add_submenu_page($parent_slug, __('Dashboard', 'healthcare-lite'), __('Dashboard', 'healthcare-lite-dashboard'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard']);
+        add_submenu_page($parent_slug, __('Dashboard', 'shchealthcare-lite'), __('Dashboard', 'healthcare-lite-dashboard'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard']);
 
-        add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-doctor', [$this, 'healthcare_admin_doctor']);
+        add_submenu_page($parent_slug, __('Doctor', 'shchealthcare-lite'), __('Doctor', 'shchealthcare-lite'), $capabilityAdmin, 'healthcare-lite-doctor', [$this, 'healthcare_admin_doctor']);
 
-        add_submenu_page($parent_slug, __('Patient', 'healthcare-lite'), __('Patient', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-patient', [$this, 'healthcare_admin_patient']);
+        add_submenu_page($parent_slug, __('Patient', 'shchealthcare-lite'), __('Patient', 'shchealthcare-lite'), $capabilityAdmin, 'healthcare-lite-patient', [$this, 'healthcare_admin_patient']);
 
-        add_submenu_page($parent_slug, __('Technologist', 'healthcare-lite'), __('Technologist', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-technologist', [$this, 'healthcare_admin_technologist']);
+        add_submenu_page($parent_slug, __('Technologist', 'shchealthcare-lite'), __('Technologist', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-technologist', [$this, 'healthcare_admin_technologist']);
 
-        add_submenu_page($parent_slug, __('Appointment', 'healthcare-lite'), __('Appointment', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-appointment', [$this, 'healthcare_admin_appintment']);
+        add_submenu_page($parent_slug, __('Appointment', 'shchealthcare-lite'), __('Appointment', 'shchealthcare-lite'), $capabilityAdmin, 'healthcare-lite-appointment', [$this, 'healthcare_admin_appintment']);
 
-        add_submenu_page($parent_slug, __('Profile', 'healthcare-lite'), __('Profile', 'healthcare-lite'), $capabilityAdmin, 'healthcare-lite-profile', [$this, 'healthcare_admin_profile']);
+        add_submenu_page($parent_slug, __('Profile', 'healthcare-lite'), __('Profile', 'shchealthcare-lite'), $capabilityAdmin, 'healthcare-lite-profile', [$this, 'healthcare_admin_profile']);
 
         /**
          * Doctor's menu starts here
          */
-        add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'healthcare-lite'), $capabilityEditor, 'healthcare-lite-doctor-dashboard', [$this, 'healthcare_doctor_doctor']);
+        add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'shchealthcare-lite'), $capabilityEditor, 'healthcare-lite-doctor-dashboard', [$this, 'healthcare_doctor_doctor']);
 
         add_action('admin_head-' . $hook, [$this, 'enqueue_assets']);
     }

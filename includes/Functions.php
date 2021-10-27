@@ -12,7 +12,7 @@ function shc_appointment($args = [])
     global $wpdb;
 
     if (empty($args['patientName'])) {
-        return new \WP_Error('no-name', __('You must provide a name.', 'healthcare-lite'));
+        return new \WP_Error('no-name', __('You must provide a name.', 'shchealthcare-lite'));
     }
 
     $defaults = [
@@ -50,7 +50,7 @@ function shc_appointment($args = [])
     );
 
     if (!$inserted) {
-        return new \WP_Error('failed-to-insert', __('Failed to insert data', 'wedevs-academy'));
+        return new \WP_Error('failed-to-insert', __('Failed to insert data', 'shchealthcare-lite'));
     }
 
     return $wpdb->insert_id;

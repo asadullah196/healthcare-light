@@ -12,7 +12,7 @@ class Shortcode
      */
     function __construct()
     {
-        add_shortcode('healthcare-lite', [$this, 'render_shortcode']);
+        add_shortcode('shchealthcare-lite', [$this, 'render_shortcode']);
     }
 
     /**

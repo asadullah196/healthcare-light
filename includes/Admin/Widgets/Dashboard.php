@@ -2,6 +2,7 @@
 
 namespace Galib1996\HealthcareLite\Admin\Widgets;
 
+
 /**
  * Dashboard handler
  */
@@ -57,8 +58,42 @@ class Dashboard
             wp_die( 'Are you cheating Manager?' );
         }
 
-        //var_dump(shc_appointment());
-        var_dump( $_POST );
+        var_dump(shc_appointment());
+
+        $patientName    = isset( $_POST['patientName']);
+        $patientNumber    = isset( $_POST['patientNumber']);
+        $patientEmail    = isset( $_POST['patientEmail']);
+        $appDate    = isset( $_POST['appDate']);
+        $appType    = isset( $_POST['appType']);
+        $patientGender    = isset( $_POST['patientGender']);
+        $lastVist    = isset( $_POST['lastVist']);
+        $patientAddress    = isset( $_POST['patientAddress']);
+        $patientNote    = isset( $_POST['patientNote']);
+
+        //$insert_id = shc_appointment();
+        
+        /*[
+            'name'    => $patientName,
+            'phone'    => $patientNumber,
+            'email'    => $patientEmail,
+            'appointment'    => $appDate,
+            'type'    => $appType,
+            'gender'    => $patientGender,
+            'visited'    => $lastVist,
+            'address'    => $patientAddress,
+            'notes'    => $patientNote,
+            
+        ] );
+
+        if ( is_wp_error( $insert_id ) ) {
+            wp_die( $insert_id->get_error_message() );
+        }
+
+        $redirected_to = admin_url( 'admin.php?page=wedevs-academy&inserted=true' );
+        wp_redirect( $redirected_to );
+        exit;*/
+
+        var_dump($_POST);
         exit;
     }
 

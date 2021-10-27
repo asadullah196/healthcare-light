@@ -1,5 +1,7 @@
 <?php
 
+namespace Galib1996\HealthcareLite;
+
 /**
  * Insert a new appointment
  *
@@ -7,7 +9,7 @@
  *
  * @return int|WP_Error
  */
-function shc_appointment($args = [])
+function shc_appointment( $args = [] )
 {
     global $wpdb;
 

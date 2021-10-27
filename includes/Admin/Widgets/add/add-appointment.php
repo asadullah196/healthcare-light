@@ -27,42 +27,42 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
             <div class="col-md-8 appointment-info">
                 <form action="" method="post">
 
-                    <label for="patientName"><?php _e('Full Name:*', 'healthcare-lite'); ?></label>
-                    <input type="text" id="patientName" name="patientName" placeholder="<?php _e('Your Name', 'healthcare-lite'); ?>"><br><br>
+                    <label for="patientName"><?php echo esc_html__('Full Name:*', 'healthcare-lite'); ?></label>
+                    <input type="text" id="patientName" name="patientName" placeholder="<?php echo esc_html__('Your Name', 'healthcare-lite'); ?>"><br><br>
 
-                    <label for="patientNumber"><?php _e('Phone Number:*', 'healthcare-lite'); ?></label>
-                    <input type="text" id="patientNumber" name="patientNumber" placeholder="<?php _e('Phone Number', 'healthcare-lite'); ?>"><br><br>
+                    <label for="patientNumber"><?php echo esc_html__('Phone Number:*', 'healthcare-lite'); ?></label>
+                    <input type="text" id="patientNumber" name="patientNumber" placeholder="<?php echo esc_html__('Phone Number', 'healthcare-lite'); ?>"><br><br>
 
-                    <label for="patientEmail"><?php _e('Email Address:', 'healthcare-lite'); ?></label>
-                    <input type="email" id="patientEmail" name="patientEmail" placeholder="<?php _e('Email Address', 'healthcare-lite'); ?>"><br><br>
+                    <label for="patientEmail"><?php echo esc_html__('Email Address:', 'healthcare-lite'); ?></label>
+                    <input type="email" id="patientEmail" name="patientEmail" placeholder="<?php echo esc_html__('Email Address', 'healthcare-lite'); ?>"><br><br>
 
 
-                    <label for="appDate"><?php _e('Appointment Date:', 'healthcare-lite'); ?></label>
-                    <input type="date" id="appDate" name="appDate" placeholder="<?php _e('Appointment Date', 'healthcare-lite'); ?>"><br><br>
+                    <label for="appDate"><?php echo esc_html__('Appointment Date:', 'healthcare-lite'); ?></label>
+                    <input type="date" id="appDate" name="appDate" placeholder="<?php echo esc_html__('Appointment Date', 'healthcare-lite'); ?>"><br><br>
 
-                    <label for="appType"><?php _e('Appointment Type:', 'healthcare-lite'); ?></label>
+                    <label for="appType"><?php echo esc_html__('Appointment Type:', 'healthcare-lite'); ?></label>
                     <input type="checkbox" id="appTypeRegular" name="appTypeRegular" value="regular">
-                    <label id="widthzero" for="appType"><?php _e('Regular', 'healthcare-lite'); ?> &nbsp;&nbsp;</label>
+                    <label id="widthzero" for="appType"><?php echo esc_html__('Regular', 'healthcare-lite'); ?> &nbsp;&nbsp;</label>
                     <input type="checkbox" id="appTypeUrgent" name="appTypeUrgent" value="Urgent">
-                    <label for="appTypeUrgent"> <?php _e('Urgent', 'healthcare-lite'); ?></label><br><br>
+                    <label for="appTypeUrgent"> <?php echo esc_html__('Urgent', 'healthcare-lite'); ?></label><br><br>
 
-                    <label for="patientGender"><?php _e('Gender:', 'healthcare-lite'); ?></label>
+                    <label for="patientGender"><?php echo esc_html__('Gender:', 'healthcare-lite'); ?></label>
                     <input type="radio" id="patientGenderMale" name="patientGenderMale" value="Male">
-                    <label id="widthzero" for="patientGenderMale"> <?php _e('Male', 'healthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label id="widthzero" for="patientGenderMale"> <?php echo esc_html__('Male', 'healthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="patientGenderFemale" name="patientGenderFemale" value="Female">
-                    <label for="patientGenderFemale"><?php _e('Female', 'healthcare-lite'); ?></label><br><br>
+                    <label for="patientGenderFemale"><?php echo esc_html__('Female', 'healthcare-lite'); ?></label><br><br>
 
-                    <label for="lastVist"><?php _e('visited in last 3 month?', 'healthcare-lite'); ?></label>
+                    <label for="lastVist"><?php echo esc_html__('visited in last 3 month?', 'healthcare-lite'); ?></label>
                     <input type="radio" id="lastVistYes" name="lastVistYes" value="Last Visit">
-                    <label id="widthzero" for="lastVistYes"> <?php _e('Yes', 'healthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label id="widthzero" for="lastVistYes"> <?php echo esc_html__('Yes', 'healthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="radio" id="lastVistNo" name="lastVistNo" value="No">
-                    <label for="lastVistNo"><?php _e('No', 'healthcare-lite'); ?></label><br><br>
+                    <label for="lastVistNo"><?php echo esc_html__('No', 'healthcare-lite'); ?></label><br><br>
 
-                    <label for="patientAddress"><?php _e('Address:', 'healthcare-lite'); ?></label>
-                    <input type="text" id="patientAddress" name="patientAddress" placeholder="<?php _e('Your Address', 'healthcare-lite'); ?>"><br><br>
+                    <label for="patientAddress"><?php echo esc_html__('Address:', 'healthcare-lite'); ?></label>
+                    <input type="text" id="patientAddress" name="patientAddress" placeholder="<?php echo esc_html__('Your Address', 'healthcare-lite'); ?>"><br><br>
 
-                    <label for="patientNote"><?php _e('Special Notes(if any):', 'healthcare-lite'); ?></label><br>
-                    <textarea id="patientNote" name="patientNote" rows="4" cols="50" placeholder="<?php _e('Add your specil note here!', 'healthcare-lite'); ?>"></textarea><br><br>
+                    <label for="patientNote"><?php echo esc_html__('Special Notes(if any):', 'healthcare-lite'); ?></label><br>
+                    <textarea id="patientNote" name="patientNote" rows="4" cols="50" placeholder="<?php echo esc_html__('Add your specil note here!', 'healthcare-lite'); ?>"></textarea><br><br>
 
                     <!--This is nonce for avoiding SQL injection and outsider submission-->
                     <?php wp_nonce_field( 'new-appointment' ); ?>

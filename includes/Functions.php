@@ -1,7 +1,5 @@
 <?php
 
-namespace Galib1996\HealthcareLite;
-
 /**
  * Insert a new appointment
  *

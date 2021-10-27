@@ -58,8 +58,6 @@ class Dashboard
             wp_die( 'Are you cheating Manager?' );
         }
 
-        var_dump(shc_appointment());
-
         $patientName    = isset( $_POST['patientName']);
         $patientNumber    = isset( $_POST['patientNumber']);
         $patientEmail    = isset( $_POST['patientEmail']);
@@ -70,7 +68,7 @@ class Dashboard
         $patientAddress    = isset( $_POST['patientAddress']);
         $patientNote    = isset( $_POST['patientNote']);
 
-        //$insert_id = shc_appointment();
+        $insert_id = shc_appointment();
         
         /*[
             'name'    => $patientName,

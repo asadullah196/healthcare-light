@@ -7,12 +7,13 @@
  *
  * @return int|WP_Error
  */
-function shc_appointment( $args = [] )
-{
-    global $wpdb;
+
+function shc_appointment( $args = [] ) {
+        global $wpdb;
+    
 
     if ( empty( $args['patientName'] ) ) {
-        return new \WP_Error( 'no-name', __( 'You must provide a name.', 'shchealthcare-lite' ) );
+        return new \WP_Error( 'no-name', __( 'You must provide a name kid.', 'shchealthcare-lite' ) );
     }
 
     $defaults = [

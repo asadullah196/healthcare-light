@@ -72,7 +72,9 @@ class Dashboard
         $patientAddress    = isset($_POST['patientAddress']);
         $patientNote    = isset($_POST['patientNote']);
 
-        
+        $patientName    = isset( $_POST['patientName'] ) ? sanitize_text_field( $_POST['patientName'] ) : '';
+        $patientNumber   = isset( $_POST['patientNumber'] ) ? sanitize_text_field( $_POST['patientNumber'] ) : '';
+
         if ( empty( $patientName ) ) {
             $this->errors['patientName'] = __( 'Please provide a name', 'shchealthcare-lite' );
         }
@@ -85,7 +87,7 @@ class Dashboard
             return;
         }
 
-        $insert_id = shc_appointment()([
+        $insert_id = shc_appointment([
             'name'    => $patientName,
             'phone'    => $patientNumber,
             'email'    => $patientEmail,

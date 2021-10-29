@@ -11,8 +11,8 @@ function shc_appointment( $args = [] )
 {
     global $wpdb;
 
-    if (empty($args['patientName'])) {
-        return new \WP_Error('no-name', __('You must provide a name.', 'shchealthcare-lite'));
+    if ( empty( $args['patientName'] ) ) {
+        return new \WP_Error( 'no-name', __( 'You must provide a name.', 'shchealthcare-lite' ) );
     }
 
     $defaults = [

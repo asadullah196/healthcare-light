@@ -2,13 +2,14 @@
 
 namespace Galib1996\HealthcareLite\Admin\Widgets;
 
-use Galib1996\HealthcareLite\Admin;
-
 /**
  * Dashboard handler
  */
 class Dashboard
 {
+
+    public $errors = [];
+
     public function admin_dashboard()
     {
         $action = isset( $_GET['action'] ) ? $_GET['action'] : 'dashboard';
@@ -69,9 +70,11 @@ class Dashboard
         $patientAddress    = isset( $_POST['patientAddress']);
         $patientNote    = isset( $_POST['patientNote']);
 
-        //$insert_id = shc_appointment();
-        
-        /*[
+        if ( ! empty( $this->errors ) ) {
+            return;
+        }
+
+        $insert_id = shc_appointment()([
             'name'    => $patientName,
             'phone'    => $patientNumber,
             'email'    => $patientEmail,
@@ -88,15 +91,10 @@ class Dashboard
             wp_die( $insert_id->get_error_message() );
         }
 
-        $redirected_to = admin_url( 'admin.php?page=wedevs-academy&inserted=true' );
+        $redirected_to = admin_url( 'admin.php?page=healthcare-lite&inserted=true' );
         wp_redirect( $redirected_to );
-        exit;*/
-
-        var_dump(shc_appointment());
-        var_dump($_POST);
         exit;
     }
-
 
     /**
      * Admin panel doctor's design

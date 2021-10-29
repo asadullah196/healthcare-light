@@ -9,8 +9,13 @@ use Galib1996\HealthcareLite\Admin\Widgets\Dashboard;
  */
 class Menu
 {
-    function __construct()
+    public $dashboard;
+    /**
+     * Install the class
+     */
+    function __construct( $dashboard )
     {
+        $this->dashboard = $dashboard;
         add_action('admin_menu', [$this, 'admin_menu']);
     }
 
@@ -24,9 +29,9 @@ class Menu
         /**
          * Admin menu starts here
          */
-        $hook = add_menu_page(__('Healthcare Lite', 'shchealthcare-lite'), __('Healthcare Lite', 'shchealthcare-lite'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard'], 'dashicons-image-filter', 20);
+        $hook = add_menu_page(__('Healthcare Lite', 'shchealthcare-lite'), __('Healthcare Lite', 'shchealthcare-lite'), $capabilityAdmin, $parent_slug, [$this->dashboard, 'admin_dashboard'], 'dashicons-image-filter', 20);
 
-        add_submenu_page($parent_slug, __('Dashboard', 'shchealthcare-lite'), __('Dashboard', 'healthcare-lite-dashboard'), $capabilityAdmin, $parent_slug, [$this, 'healthcare_admin_dashboard']);
+        add_submenu_page($parent_slug, __('Dashboard', 'shchealthcare-lite'), __('Dashboard', 'healthcare-lite-dashboard'), $capabilityAdmin, $parent_slug, [$this->dashboard, 'admin_dashboard']);
 
         add_submenu_page($parent_slug, __('Doctor', 'shchealthcare-lite'), __('Doctor', 'shchealthcare-lite'), $capabilityAdmin, 'healthcare-lite-doctor', [$this, 'healthcare_admin_doctor']);
 
@@ -44,15 +49,6 @@ class Menu
         add_submenu_page($parent_slug, __('Doctor', 'healthcare-lite'), __('Doctor', 'shchealthcare-lite'), $capabilityEditor, 'healthcare-lite-doctor-dashboard', [$this, 'healthcare_doctor_doctor']);
 
         add_action('admin_head-' . $hook, [$this, 'enqueue_assets']);
-    }
-
-    /**
-     * healthcare_dashboard_doc call back define
-     */
-    public function healthcare_admin_dashboard()
-    {
-        $admin = new Dashboard();
-        $admin->admin_dashboard();
     }
 
     public function healthcare_admin_doctor()

@@ -12,10 +12,10 @@ class Dashboard
 
     public function admin_dashboard()
     {
-        $action = isset( $_GET['action'] ) ? $_GET['action'] : 'dashboard';
+        $action = isset($_GET['action']) ? $_GET['action'] : 'dashboard';
 
-        switch ( $action ) {
-            
+        switch ($action) {
+
             case 'addap':
                 $template = __DIR__ . '/add/add-appointment.php';
                 break;
@@ -37,7 +37,7 @@ class Dashboard
                 break;
         }
 
-        if ( file_exists( $template ) ) {
+        if (file_exists($template)) {
             include $template;
         }
     }
@@ -47,30 +47,41 @@ class Dashboard
      *
      * @return void
      */
-    public function appointment_handler() {
-        if ( ! isset( $_POST['submit_address'] ) ) {
+    public function appointment_handler()
+    {
+
+        if (!isset($_POST['submit_address'])) {
             return;
         }
 
-        if ( ! wp_verify_nonce( $_POST['_wpnonce'], 'new-appointment' ) ) {
-            wp_die( 'Are you cheating Kid?' );
+        if (!wp_verify_nonce($_POST['_wpnonce'], 'new-appointment')) {
+            wp_die('Are you cheating Kid?');
         }
 
-        if ( ! current_user_can( 'manage_options' ) ) {
-            wp_die( 'Are you cheating Manager?' );
+        if (!current_user_can('manage_options')) {
+            wp_die('Are you cheating Manager?');
         }
 
-        $patientName    = isset( $_POST['patientName']);
-        $patientNumber    = isset( $_POST['patientNumber']);
-        $patientEmail    = isset( $_POST['patientEmail']);
-        $appDate    = isset( $_POST['appDate']);
-        $appType    = isset( $_POST['appType']);
-        $patientGender    = isset( $_POST['patientGender']);
-        $lastVist    = isset( $_POST['lastVist']);
-        $patientAddress    = isset( $_POST['patientAddress']);
-        $patientNote    = isset( $_POST['patientNote']);
+        $patientName    = isset($_POST['patientName']);
+        $patientNumber    = isset($_POST['patientNumber']);
+        $patientEmail    = isset($_POST['patientEmail']);
+        $appDate    = isset($_POST['appDate']);
+        $appType    = isset($_POST['appType']);
+        $patientGender    = isset($_POST['patientGender']);
+        $lastVist    = isset($_POST['lastVist']);
+        $patientAddress    = isset($_POST['patientAddress']);
+        $patientNote    = isset($_POST['patientNote']);
 
-        if ( ! empty( $this->errors ) ) {
+        
+        if ( empty( $patientName ) ) {
+            $this->errors['patientName'] = __( 'Please provide a name', 'shchealthcare-lite' );
+        }
+
+        if ( empty( $patientNumber ) ) {
+            $this->errors['patientNumber'] = __( 'Please provide a phone number.', 'shchealthcare-lite' );
+        }
+
+        if (!empty($this->errors)) {
             return;
         }
 
@@ -83,16 +94,16 @@ class Dashboard
             'gender'    => $patientGender,
             'visited'    => $lastVist,
             'address'    => $patientAddress,
-            'notes'    => $patientNote,
-            
-        ] );
+            'notes'    => $patientNote
 
-        if ( is_wp_error( $insert_id ) ) {
-            wp_die( $insert_id->get_error_message() );
+        ]);
+
+        if (is_wp_error($insert_id)) {
+            wp_die($insert_id->get_error_message());
         }
 
-        $redirected_to = admin_url( 'admin.php?page=healthcare-lite&inserted=true' );
-        wp_redirect( $redirected_to );
+        $redirected_to = admin_url('admin.php?page=healthcare-lite&inserted=true');
+        wp_redirect($redirected_to);
         exit;
     }
 
@@ -102,10 +113,10 @@ class Dashboard
     public function doctors_dashboard()
     {
 
-        $action = isset( $_GET['action'] ) ? $_GET['action'] : 'dashboard';
+        $action = isset($_GET['action']) ? $_GET['action'] : 'dashboard';
 
-        switch ( $action ) {
-            
+        switch ($action) {
+
             case 'add':
                 $template = __DIR__ . '/add/add-patient.php';
                 break;
@@ -119,9 +130,8 @@ class Dashboard
                 break;
         }
 
-        if ( file_exists( $template ) ) {
+        if (file_exists($template)) {
             include $template;
         }
     }
-
 }

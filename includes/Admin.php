@@ -9,8 +9,9 @@ class Admin
 {
     function __construct()
     {
-        $this->dispatch_actions();
-        new Admin\Menu();
+        $dashboard = new Admin\Widgets\Dashboard();
+        $this->dispatch_actions( $dashboard );
+        new Admin\Menu( $dashboard );
     }
 
     /**
@@ -18,9 +19,7 @@ class Admin
      *
      * @return void
      */
-    public function dispatch_actions() {
-        $dashboard = new Admin\Widgets\Dashboard();
-
+    public function dispatch_actions( $dashboard ) {
         add_action( 'admin_init', [ $dashboard, 'appointment_handler' ] );
     }
 }

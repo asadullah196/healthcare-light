@@ -21,6 +21,9 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
     </div>
 
     <div class="new-appointment">
+        
+        <?php var_dump( $this->errors ); ?>
+
         <h1>Book your appointment</h1>
         <p>We will confirm your appointment within 2 hours.</p>
         <div class="row">

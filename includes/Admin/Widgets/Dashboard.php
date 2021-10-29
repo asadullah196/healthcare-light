@@ -2,6 +2,7 @@
 
 namespace Galib1996\HealthcareLite\Admin\Widgets;
 
+use Galib1996\HealthcareLite\Admin;
 
 /**
  * Dashboard handler
@@ -68,7 +69,7 @@ class Dashboard
         $patientAddress    = isset( $_POST['patientAddress']);
         $patientNote    = isset( $_POST['patientNote']);
 
-        $insert_id = shc_appointment();
+        //$insert_id = shc_appointment();
         
         /*[
             'name'    => $patientName,
@@ -91,6 +92,7 @@ class Dashboard
         wp_redirect( $redirected_to );
         exit;*/
 
+        var_dump(shc_appointment());
         var_dump($_POST);
         exit;
     }

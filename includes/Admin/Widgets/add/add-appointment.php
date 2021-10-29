@@ -40,22 +40,22 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@
                     <label for="appDate"><?php echo esc_html__('Appointment Date:', 'shchealthcare-lite'); ?></label>
                     <input type="date" id="appDate" name="appDate" placeholder="<?php echo esc_html__('Appointment Date', 'shchealthcare-lite'); ?>"><br><br>
 
-                    <label for="appType" id="appType" name="appType"><?php echo esc_html__('Appointment Type:', 'shchealthcare-lite'); ?></label>
-                    <input type="checkbox" id="appTypeRegular" name="appTypeRegular" value="regular">
+                    <label for="appType"><?php echo esc_html__('Appointment Type:', 'shchealthcare-lite'); ?></label>
+                    <input type="radio" id="appTypeRegular" name="appType" value="regular">
                     <label id="widthzero" for="appType"><?php echo esc_html__('Regular', 'shchealthcare-lite'); ?> &nbsp;&nbsp;</label>
-                    <input type="checkbox" id="appTypeUrgent" name="appTypeUrgent" value="Urgent">
+                    <input type="radio" id="appTypeUrgent" name="appType" value="Urgent">
                     <label for="appTypeUrgent"> <?php echo esc_html__('Urgent', 'shchealthcare-lite'); ?></label><br><br>
 
-                    <label for="patientGender" id="patientGender" name="patientGender"><?php echo esc_html__('Gender:', 'shchealthcare-lite'); ?></label>
-                    <input type="radio" id="patientGenderMale" name="patientGenderMale" value="Male">
+                    <label for="patientGender"><?php echo esc_html__('Gender:', 'shchealthcare-lite'); ?></label>
+                    <input type="radio" id="patientGenderMale" name="patientGender" value="Male">
                     <label id="widthzero" for="patientGenderMale"> <?php echo esc_html__('Male', 'shchealthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="radio" id="patientGenderFemale" name="patientGenderFemale" value="Female">
+                    <input type="radio" id="patientGenderFemale" name="patientGender" value="Female">
                     <label for="patientGenderFemale"><?php echo esc_html__('Female', 'shchealthcare-lite'); ?></label><br><br>
 
-                    <label for="lastVist" id="lastVist" name="lastVist"><?php echo esc_html__('visited in last 3 month?', 'shchealthcare-lite'); ?></label>
-                    <input type="radio" id="lastVistYes" name="lastVistYes" value="Last Visit">
+                    <label for="lastVist"><?php echo esc_html__('visited in last 3 month?', 'shchealthcare-lite'); ?></label>
+                    <input type="radio" id="lastVistYes" name="lastVist" value="Last Visit">
                     <label id="widthzero" for="lastVistYes"> <?php echo esc_html__('Yes', 'shchealthcare-lite'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="radio" id="lastVistNo" name="lastVistNo" value="No">
+                    <input type="radio" id="lastVistNo" name="lastVist" value="No">
                     <label for="lastVistNo"><?php echo esc_html__('No', 'shchealthcare-lite'); ?></label><br><br>
 
                     <label for="patientAddress"><?php echo esc_html__('Address:', 'shchealthcare-lite'); ?></label>

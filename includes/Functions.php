@@ -55,3 +55,5 @@ function shc_appointment( $args = [] )
 
     return $wpdb->insert_id;
 }
+
+

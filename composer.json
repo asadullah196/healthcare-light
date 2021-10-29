@@ -3,12 +3,18 @@
     "description": "A clinic and doctor's chamber management wordpress plugin.",
     "type": "wordpress-plugin",
     "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Asadulah Galib",
+            "email": "md.asadullah196@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
     "autoload": {
         "psr-4": {
             "Galib1996\\HealthcareLite\\": "includes/"
-        }
-    },
-    "files": [ "includes/functions.php" ],
-    "minimum-stability": "dev",
-    "require": {}
+        },
+        "files": [ "includes/functions.php" ]
+    }
 }
